@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Clipboard</string>
+    <string name="app_tagline">حافظة ذكية مشفرة تعمل محليًا أولًا</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_all_clips">كل النصوص</string>
+    <string name="nav_favorites">المفضلة</string>
+    <string name="nav_collections">المجموعات</string>
+    <string name="nav_search">البحث</string>
+    <string name="nav_integrations">التكاملات</string>
+    <string name="nav_backup_sync">النسخ والمزامنة</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="nav_trash">سلة المحذوفات</string>
+    <string name="nav_clip_details">تفاصيل النص</string>
+
+    <!-- Actions & Common -->
+    <string name="action_add_clip">إضافة نص</string>
+    <string name="action_paste_from_clipboard">التقاط الحافظة</string>
+    <string name="action_copy">نسخ</string>
+    <string name="action_copied">تم النسخ إلى الحافظة</string>
+    <string name="action_edit">تعديل</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_restore">استعادة</string>
+    <string name="action_delete_forever">حذف نهائي</string>
+    <string name="action_pin">تثبيت</string>
+    <string name="action_unpin">إلغاء التثبيت</string>
+    <string name="action_favorite">إضافة للمفضلة</string>
+    <string name="action_unfavorite">إزالة من المفضلة</string>
+    <string name="action_share">مشاركة</string>
+    <string name="action_sync_now">مزامنة الآن</string>
+    <string name="action_back">رجوع</string>
+    <string name="action_select_all">تحديد الكل</string>
+    <string name="action_clear_selection">إلغاء التحديد</string>
+    <string name="action_close">إغلاق</string>
+
+    <!-- Home & Clips -->
+    <string name="home_recent_clips">أحدث النصوص</string>
+    <string name="home_pinned_clips">المثبتة</string>
+    <string name="home_quick_capture">التقاط سريع</string>
+    <string name="home_clipboard_detected">تم اكتشاف نص جديد في حافظة النظام</string>
+    <string name="home_save_detected">حفظ النص</string>
+    <string name="empty_clips_title">خزنة الحافظة فارغة</string>
+    <string name="empty_clips_subtitle">اضغط + لحفظ نص جديد، أو شارك نصًا من أي تطبيق، أو التقط الحافظة الحالية.</string>
+    <string name="empty_favorites_title">لا توجد عناصر مفضلة بعد</string>
+    <string name="empty_favorites_subtitle">ميّز النصوص والروابط والأكواد المهمة بنجمة للوصول إليها بنقرة واحدة.</string>
+    <string name="empty_trash_title">سلة المحذوفات فارغة</string>
+    <string name="empty_trash_subtitle">تبقى النصوص المحذوفة هنا حتى يتم مسحها نهائيًا.</string>
+
+    <!-- Clip Fields & Types -->
+    <string name="label_title_optional">العنوان (اختياري)</string>
+    <string name="label_content">محتوى النص</string>
+    <string name="label_category">التصنيف</string>
+    <string name="label_tags">الوسوم (مفصولة بفاصلة)</string>
+    <string name="label_sensitive">تشفير محلي (محتوى حساس)</string>
+    <string name="label_sensitive_hint">تشفير AES-256-GCM عبر Android Keystore وإخفاء المعاينة</string>
+    <string name="type_text">نص</string>
+    <string name="type_link">رابط</string>
+    <string name="type_code">كود</string>
+    <string name="type_note">ملاحظة</string>
+    <string name="type_address">عنوان</string>
+    <string name="duplicate_detected_msg">تم العثور على نص مكرر — تم الدمج والتحديث</string>
+
+    <!-- Categories -->
+    <string name="cat_personal">شخصي</string>
+    <string name="cat_work">العمل</string>
+    <string name="cat_programming">البرمجة</string>
+    <string name="cat_links">الروابط</string>
+    <string name="cat_notes">الملاحظات</string>
+    <string name="cat_important">مهم</string>
+
+    <!-- Search -->
+    <string name="search_placeholder">ابحث في النصوص، الروابط، الأكواد، الوسوم…</string>
+    <string name="search_no_results">لا توجد نتائج مطابقة</string>
+    <string name="filter_all">الكل</string>
+    <string name="filter_today">اليوم</string>
+    <string name="filter_week">آخر 7 أيام</string>
+    <string name="filter_month">آخر 30 يومًا</string>
+
+    <!-- Integrations -->
+    <string name="telegram_title">بوت تيليجرام</string>
+    <string name="telegram_subtitle">إرسال النصوص إلى البوت واستقبال الرسائل المرسلة إليه</string>
+    <string name="telegram_notice">تنبيه: يجب أن تبدأ المحادثة مع البوت بنفسك عبر /start، ولا يستطيع البوت قراءة محادثاتك الخاصة الأخرى.</string>
+    <string name="discord_title">مساحة ديسكورد</string>
+    <string name="discord_subtitle">الإرسال عبر Webhook، والاستقبال من القناة عبر Bot Token مصرح به</string>
+    <string name="discord_notice">الـ Webhook للإرسال فقط؛ استقبال الرسائل يتطلب Bot Token مصرحًا به ومعرّف القناة بشكل منفصل.</string>
+    <string name="drive_title">جوجل درايف</string>
+    <string name="drive_subtitle">نسخ احتياطية مشفرة أو نصية عبر OAuth 2.0 في مجلد التطبيق أو مجلد مخصص</string>
+
+    <!-- Security & Lock -->
+    <string name="lock_title">الحافظة الذكية مقفلة</string>
+    <string name="lock_subtitle">تحقق بالبصمة أو رمز قفل الجهاز للوصول إلى النصوص المشفرة</string>
+    <string name="lock_unlock_button">فتح القفل</string>
+</resources>

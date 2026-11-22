@@ -1,0 +1,48 @@
+name: Build APK
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Create debug keystore
+        run: |
+          keytool -genkeypair -keystore debug.keystore \
+            -storepass android -alias androiddebugkey -keypass android \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
+
+      - name: Build
+        run: gradle :app:assembleDebug --no-daemon --console=plain
+
+      - name: Rename APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk SmartKey-Clip-debug.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: smartkey-clip-apk
+          path: SmartKey-Clip-debug.apk
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create latest-apk SmartKey-Clip-debug.apk --title "Latest APK" --notes "Auto build" \
+          || gh release upload latest-apk SmartKey-Clip-debug.apk --clobber
